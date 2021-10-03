@@ -2,9 +2,11 @@
   margin: 1rem;
   width: calc(45% - 2rem);
   min-width: 17.5rem;
+  box-sizing: border-box;
 }
 
 .user-item a {
+  max-width: 100%;
   display: flex;
   align-items: center;
   width: 100%;
@@ -22,6 +24,8 @@
 
 .user-item__content {
   padding: 0;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .user-item__image {

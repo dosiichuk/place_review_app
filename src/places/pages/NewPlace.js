@@ -1,10 +1,9 @@
-import React from 'react'
-
+import React from "react";
 
 export default function NewPlace() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <h1>Hew place</h1>
+    </div>
+  );
 }

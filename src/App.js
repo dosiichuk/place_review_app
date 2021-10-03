@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
@@ -8,19 +6,28 @@ import {
 } from "react-router-dom";
 import Users from "./user/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
+import MainNavigation from "./shared/components/Navigation/MainNavigation";
+import UserPlaces from "./places/pages/UserPlaces";
+import "./App.css";
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <Users />
-        </Route>
-        <Route exact path="/places/new">
-          <NewPlace />
-        </Route>
-        <Redirect to="/" />
-      </Switch>
+      <MainNavigation />
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Users />
+          </Route>
+          <Route path="/:userId/places" exact>
+            <UserPlaces />
+          </Route>
+          <Route exact path="/places/new">
+            <NewPlace />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </main>
     </Router>
   );
 }
